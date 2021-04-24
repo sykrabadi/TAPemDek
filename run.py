@@ -9,5 +9,5 @@ flask run
 
 Cara lain nge-run app, di terminal, ketik:
 $ENV:FLASK_APP = 'run.py'
-#ENV:FLASK_DEBUG = 1
+$ENV:FLASK_DEBUG = 1
 """
