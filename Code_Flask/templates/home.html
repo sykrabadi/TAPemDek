@@ -45,8 +45,8 @@ Iris Classifier
                         <label for="sepal_length" class="form-label">Sepal Length</label>
                         <div class="row">
                             <div class="col-11">
-                                <input onchange="updateRangeVal('sl_val', this.value)" type="range" class="form-range"
-                                    min="1" max="5" step="0.1" id="sepal_length" name="sepal_length">
+                                <input oninputoninput="updateRangeVal('sl_val', this.value)" type="range"
+                                    class="form-range" min="1" max="5" step="0.1" id="sepal_length" name="sepal_length">
                             </div>
                             <div class="col-1">
                                 <span id="sl_val">2.5</span>
@@ -57,7 +57,7 @@ Iris Classifier
                         <label for="sepal_width" class="form-label">Sepal Width</label>
                         <div class="row">
                             <div class="col-11">
-                                <input onchange="updateRangeVal('sw_val', this.value)" type="range" class="form-range"
+                                <input oninput="updateRangeVal('sw_val', this.value)" type="range" class="form-range"
                                     min="1" max="5" step="0.1" id="sepal_width" name="sepal_width">
                             </div>
                             <div class="col-1">
@@ -65,12 +65,13 @@ Iris Classifier
                             </div>
                         </div>
                     </div>
+
                     <div class="row mb-2">
                         <label for="petal_length" class="form-label">Petal Length</label>
                         <div class="row">
                             <div class="col-11">
-                                <input onchange="updateRangeVal('pl_val', this.value)" type="range" class="form-range"
-                                    min="1" max="5" step="0.1" id="petal_length" name="petal_length">
+                                <input oninput="updateRangeVal('pl_val', this.value)" type="range" class="form-range"
+                                    min="1" max="5" step="0.1" id="petal_width" name="petal_length">
                             </div>
                             <div class="col-1">
                                 <span id="pl_val">2.5</span>
@@ -81,7 +82,7 @@ Iris Classifier
                         <label for="petal_width" class="form-label">Petal Width</label>
                         <div class="row">
                             <div class="col-11">
-                                <input onchange="updateRangeVal('pw_val', this.value)" type="range" class="form-range"
+                                <input oninput="updateRangeVal('pw_val', this.value)" type="range" class="form-range"
                                     min="1" max="5" step="0.1" id="petal_width" name="petal_width">
                             </div>
                             <div class="col-1">
@@ -93,7 +94,7 @@ Iris Classifier
                         <label for="n_neighbors" class="form-label">N-Neighbors</label>
                         <div class="row">
                             <div class="col-11">
-                                <input onchange="updateRangeVal('nn', this.value)" type="range" class="form-range"
+                                <input oninput="updateRangeVal('nn', this.value)" type="range" class="form-range"
                                     min="1" max="10" id="n_neighbors" name="n_neighbors">
                             </div>
                             <div class="col-1">
