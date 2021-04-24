@@ -1,0 +1,122 @@
+{% extends 'base.html' %}
+{% block title %}
+Iris Classifier
+{% endblock %}
+
+{% block content %}
+<section id="Classify" class="py-5 bg-secondary text-white">
+    <div class="container pt-3 pb-4">
+        <div class="row justify-content-center mt-3">
+            <div class="col-4 text-center">
+                <h4>About</h4>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro rem quasi
+                    perspiciatis accusamus
+                    id saepe
+                    reiciendis quisquam dolores modi, totam vero fugit ratione, at excepturi ducimus laboriosam
+                    nulla.
+                </p>
+                <div id="IrisCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner rounded">
+                        <div class="carousel-item active">
+                            <img src="{{ url_for('static', filename='1.jpg') }}" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{{ url_for('static', filename='2.jpg') }}" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{{ url_for('static', filename='3.jpg') }}" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#IrisCarousel"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#IrisCarousel"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <div class="col-4 bg-dark rounded ">
+                <form class="px-4 py-4" action="" method="POST">
+                    <div class="row mb-2">
+                        <label for="sepal_length" class="form-label">Sepal Length</label>
+                        <div class="row">
+                            <div class="col-11">
+                                <input onchange="updateRangeVal('sl_val', this.value)" type="range" class="form-range"
+                                    min="1" max="5" step="0.1" id="sepal_length">
+                            </div>
+                            <div class="col-1">
+                                <span id="sl_val">2.5</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-2">
+                        <label for="sepal_width" class="form-label">Sepal Width</label>
+                        <div class="row">
+                            <div class="col-11">
+                                <input onchange="updateRangeVal('sw_val', this.value)" type="range" class="form-range"
+                                    min="1" max="5" step="0.1" id="sepal_width">
+                            </div>
+                            <div class="col-1">
+                                <span id="sw_val">2.5</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-2">
+                        <label for="petal_length" class="form-label">Petal Length</label>
+                        <div class="row">
+                            <div class="col-11">
+                                <input onchange="updateRangeVal('pl_val', this.value)" type="range" class="form-range"
+                                    min="1" max="5" step="0.1" id="petal_length">
+                            </div>
+                            <div class="col-1">
+                                <span id="pl_val">2.5</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-2">
+                        <label for="petal_width" class="form-label">Petal Width</label>
+                        <div class="row">
+                            <div class="col-11">
+                                <input onchange="updateRangeVal('pw_val', this.value)" type="range" class="form-range"
+                                    min="1" max="5" step="0.1" id="petal_width">
+                            </div>
+                            <div class="col-1">
+                                <span id="pw_val">2.5</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-2">
+                        <label for="n_neighbors" class="form-label">N-Neighbors</label>
+                        <div class="row">
+                            <div class="col-11">
+                                <input onchange="updateRangeVal('nn', this.value)" type="range" class="form-range"
+                                    min="1" max="5" step="0.1" id="n_neighbors">
+                            </div>
+                            <div class="col-1">
+                                <span id="nn">2.5</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-2">
+                        <button type="submit" class="btn btn-secondary mx-auto mt-3"> Predict </button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-4">
+                <h5>Hasil</h5>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="container-fluid bg-dark position-absolute mb-0 text-white">
+    <p class="text-center m-auto py-3">
+        Made by <a href="https://github.com/aldy-san">Nur Syahrial Maulidi</a> and <a
+            href="https://github.com/sykrabadi"> Muhammad Syukur Abadi</a>
+    </p>
+</footer>
+{% endblock %}
