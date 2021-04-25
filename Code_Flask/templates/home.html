@@ -4,10 +4,10 @@ Iris Classifier
 {% endblock %}
 
 {% block content %}
-<section id="Classify" class="py-5 bg-secondary text-white">
-    <div class="container pt-3 pb-4">
+<section id="Classify" class="py-2 py-md-5 bg-secondary text-white">
+    <div class="container pt-md-3 pb-4">
         <div class="row justify-content-center mt-3">
-            <div class="col-4 text-center">
+            <div class="col-12 col-md-4  text-center  p-4 pb-5 py-md-0 p-md-3 ">
                 <h4>About</h4>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro rem quasi
                     perspiciatis accusamus
@@ -39,81 +39,104 @@ Iris Classifier
                     </button>
                 </div>
             </div>
-            <div class="col-4 bg-dark rounded ">
-                <form class="px-4 py-4" action="" method="POST">
-                    <div class="row mb-2">
-                        <label for="sepal_length" class="form-label">Sepal Length</label>
-                        <div class="row">
-                            <div class="col-11">
-                                <input oninput="updateRangeVal('sl_val', this.value)" type="range"
-                                    class="form-range" min="1" max="5" step="0.1" id="sepal_length" name="sepal_length">
-                            </div>
-                            <div class="col-1">
-                                <span id="sl_val">2.5</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row mb-2">
-                        <label for="sepal_width" class="form-label">Sepal Width</label>
-                        <div class="row">
-                            <div class="col-11">
-                                <input oninput="updateRangeVal('sw_val', this.value)" type="range" class="form-range"
-                                    min="1" max="5" step="0.1" id="sepal_width" name="sepal_width">
-                            </div>
-                            <div class="col-1">
-                                <span id="sw_val">2.5</span>
+            <div class="col-12 col-md-4 mb-4 p-3">
+                <div class="container bg-dark rounded">
+                    <form class="px-4 py-4" action="" method="POST">
+                        <div class="row mb-2">
+                            <label for="sepal_length" class="form-label">Sepal Length</label>
+                            <div class="row">
+                                <div class="col-11">
+                                    <input oninput="updateRangeVal('sl_val', this.value)" type="range"
+                                        class="form-range" min="1" max="5" step="0.1" id="sepal_length"
+                                        name="sepal_length">
+                                </div>
+                                <div class="col-1">
+                                    <span id="sl_val">2.5</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="row mb-2">
-                        <label for="petal_length" class="form-label">Petal Length</label>
-                        <div class="row">
-                            <div class="col-11">
-                                <input oninput="updateRangeVal('pl_val', this.value)" type="range" class="form-range"
-                                    min="1" max="5" step="0.1" id="petal_width" name="petal_length">
-                            </div>
-                            <div class="col-1">
-                                <span id="pl_val">2.5</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row mb-2">
-                        <label for="petal_width" class="form-label">Petal Width</label>
-                        <div class="row">
-                            <div class="col-11">
-                                <input oninput="updateRangeVal('pw_val', this.value)" type="range" class="form-range"
-                                    min="1" max="5" step="0.1" id="petal_width" name="petal_width">
-                            </div>
-                            <div class="col-1">
-                                <span id="pw_val">2.5</span>
+                        <div class="row mb-2">
+                            <label for="sepal_width" class="form-label">Sepal Width</label>
+                            <div class="row">
+                                <div class="col-11">
+                                    <input oninput="updateRangeVal('sw_val', this.value)" type="range"
+                                        class="form-range" min="1" max="5" step="0.1" id="sepal_width"
+                                        name="sepal_width">
+                                </div>
+                                <div class="col-1">
+                                    <span id="sw_val">2.5</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row mb-2">
-                        <label for="n_neighbors" class="form-label">N-Neighbors</label>
-                        <div class="row">
-                            <div class="col-11">
-                                <input oninput="updateRangeVal('nn', this.value)" type="range" class="form-range"
-                                    min="1" max="9" step="2" id="n_neighbors" name="n_neighbors">
-                            </div>
-                            <div class="col-1">
-                                <span id="nn">3</span>
+                        <div class="row mb-2">
+                            <label for="petal_length" class="form-label">Petal Length</label>
+                            <div class="row">
+                                <div class="col-11">
+                                    <input oninput="updateRangeVal('pl_val', this.value)" type="range"
+                                        class="form-range" min="1" max="5" step="0.1" id="petal_width"
+                                        name="petal_length">
+                                </div>
+                                <div class="col-1">
+                                    <span id="pl_val">2.5</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row mb-2">
-                        <button type="submit" class="btn btn-secondary mx-auto mt-3"> Predict </button>
-                    </div>
-                </form>
+                        <div class="row mb-2">
+                            <label for="petal_width" class="form-label">Petal Width</label>
+                            <div class="row">
+                                <div class="col-11">
+                                    <input oninput="updateRangeVal('pw_val', this.value)" type="range"
+                                        class="form-range" min="1" max="5" step="0.1" id="petal_width"
+                                        name="petal_width">
+                                </div>
+                                <div class="col-1">
+                                    <span id="pw_val">2.5</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-2">
+                            <label for="n_neighbors" class="form-label">N-Neighbors</label>
+                            <div class="row">
+                                <div class="col-11">
+                                    <input oninput="updateRangeVal('nn', this.value)" type="range" class="form-range"
+                                        min="1" max="9" step="2" id="n_neighbors" name="n_neighbors">
+                                </div>
+                                <div class="col-1">
+                                    <span id="nn">3</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-2">
+                            <button type="submit" onclick="predict()" class="btn btn-secondary mx-auto mt-3"> Predict
+                            </button>
+                        </div>
+                    </form>
+                </div>
             </div>
-            <div class="col-4">
-                <h5>Hasil</h5>
-                {% if preds == "" %}
-                <p>hehehe</p>
-                {% else %}
-                {{ preds }}
-                {% endif %}
+            <div class="col-12 col-md-4 p-3">
+                <div class="container flex flex-column rounded p-0"
+                    style="background-color: #f4f4f4; min-height:450px;">
+                    <div class="pb-2 pt-3 w-100 bg-dark rounded-top " role="alert">
+                        <h4 class="text-center">Result</h4>
+                    </div>
+                    <div class="container">
+                        {% if preds == [] %}
+                        <div class="d-flex flex-column align-items-center" id="before-predict">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24"
+                                style=" margin-top:28%;  color:#a8a9ab; fill:currentColor;">
+                                <path
+                                    d="M13 8h-8v-1h8v1zm0 2h-8v-1h8v1zm-3 2h-5v-1h5v1zm11.172 12l-7.387-7.387c-1.388.874-3.024 1.387-4.785 1.387-4.971 0-9-4.029-9-9s4.029-9 9-9 9 4.029 9 9c0 1.761-.514 3.398-1.387 4.785l7.387 7.387-2.828 2.828zm-12.172-8c3.859 0 7-3.14 7-7s-3.141-7-7-7-7 3.14-7 7 3.141 7 7 7z" />
+                            </svg>
+                            <span class="fs-5 text-center mt-4" style="color:#a8a9ab;margin-bottom:28%;"><b>Make
+                                    Predict</b></span>
+                        </div>
+                        {% else %}
+                        <!-- Hasil Prediksi -->
+                        <div class="text-dark">{{ preds }}</div>
+                        {% endif %}
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>

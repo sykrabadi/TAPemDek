@@ -7,7 +7,7 @@ app.config['SECRET_KEY'] = '026c4ba5ad18bcc7b243b4d9'
 model = joblib.load('Code_Flask/iris_classifier_knn.joblib')
 @app.route('/', methods=["GET","POST"])
 def home():
-    preds = ""
+    preds = []
     global model
     if request.method == "POST":
         sepal_length = request.form.get("sepal_length")
