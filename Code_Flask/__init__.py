@@ -1,5 +1,5 @@
 from flask import Flask, request, render_template, url_for
-from Code_Flask.ml_model.Ml_Model import Knn_Predict
+from Code_Flask.Ml_Model import Knn_Predict
 import pickle
 import joblib
 
