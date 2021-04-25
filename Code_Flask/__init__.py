@@ -1,4 +1,5 @@
 from flask import Flask, request, render_template, url_for
+from Code_Flask.ml_model.Ml_Model import Knn_Predict
 import pickle
 import joblib
 
@@ -10,18 +11,16 @@ def home():
     preds = []
     global model
     if request.method == "POST":
-        sepal_length = request.form.get("sepal_length")
-        sepal_width = request.form.get("sepal_width")
-        petal_length = request.form.get("petal_length")
-        petal_width = request.form.get("petal_width")
-        n_neighbors = request.form.get("n_neighbors")
+        sepal_length = float(request.form.get("sepal_length"))
+        sepal_width = float(request.form.get("sepal_width"))
+        petal_length = float(request.form.get("petal_length"))
+        petal_width = float(request.form.get("petal_width"))
+        n_neighbors = int(request.form.get("n_neighbors"))
         predict_data = [[sepal_length, sepal_width, petal_length, petal_width]]
+        
+        model = Knn_Predict(n_neighbors = n_neighbors)
+        model.train_and_test()
+        model.fit()
         preds = model.predict(predict_data)
-        if preds == [0]:
-            preds = "Setosa"
-        elif preds == [1]:
-            preds = "Versicolor"
-        else:
-            preds = "Virginica"
 
     return render_template('home.html', preds = preds)
