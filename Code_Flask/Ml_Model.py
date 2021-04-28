@@ -23,5 +23,5 @@ class Knn_Predict:
     def predict(self, predict_data):
         preds = self.model.predict(predict_data)
         self.pred_species = [self.iris.target_names[p] for p in preds]
-        #self.accuracy_score = accuracy_score(self.Y_test, preds)
-        return self.pred_species
+        self.accuracy_score = accuracy_score(self.Y_test, self.model.predict(self.X_test))
+        return self.pred_species,self.accuracy_score
