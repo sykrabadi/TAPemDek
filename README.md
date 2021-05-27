@@ -1,4 +1,4 @@
-# Tugas Akhir PemDek
+# Tugas Akhir Pemrograman Deklaratif
 Tugas Akhir Pemrograman Deklaratif
-## Link Deploy
+## Link Deploy Website
 http://nsmaulidi.pythonanywhere.com/
